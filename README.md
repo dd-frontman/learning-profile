@@ -1,45 +1,23 @@
-# learning-profile
+# Learning Profile - Vue 3 PWA
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
+## Запуск проекта
+```bash
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
+npm run build # production build
 ```
 
-### Type-Check, Compile and Minify for Production
+## Структура проекта
+- `/src/views` - страницы
+- `/src/components` - компоненты UI
+- `/src/stores` - состояние Pinia
+- `/src/composables` - логика XP/уровней
 
-```sh
-npm run build
-```
+## Особенности реализации
+- Использован Vite PWA Plugin для офлайн-режима
+- Адаптивная сетка CSS Grid/Flexbox
+- Анимации с Vue Transition
+- Типизация TypeScript
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+## Тестовые данные
+Логика геймификации использует mock-данные из `src/mocks/user.ts`

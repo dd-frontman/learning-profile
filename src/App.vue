@@ -1,11 +1,20 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import OfflineToast from '@/components/OfflineToast.vue'
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <div class="container">
+    <OfflineToast />
+    <router-view />
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.container {
+  font-family: 'Montserrat', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  user-select: none;
+}
+</style>
