@@ -3,9 +3,9 @@
 
 [🔗 Демо | Live demo](https://den-dev97.github.io/learning-profile/)
 
-<p align="center">
-  <img src="public/pwa/screenshots/lighthouse.png" width="47%" alt="Скриншот Lighthouse / Lighthouse audit"/>
-  <img src="public/pwa/screenshots/main.png"       width="47%" alt="Скриншот главного экрана / Main screen"/>
+<p align="center" style="display: flex">
+![lighthouse](pwa/screenshots/lighthouse.png)
+![app](pwa/screenshots/main.png)
 </p>
 
 ---
