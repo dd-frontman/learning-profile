@@ -6,8 +6,8 @@ import { VitePWA } from 'vite-plugin-pwa'
 import webfontDownload from 'vite-plugin-webfont-dl'
 import viteCompression from 'vite-plugin-compression'
 
-// https://vite.dev/config/
 export default defineConfig({
+  base: '/learning-profile/',
   plugins: [
     vue(),
     vueDevTools(),
@@ -29,29 +29,30 @@ export default defineConfig({
     ),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico, offline.html'],
+      includeAssets: ['favicon.ico'],
       manifest: {
+        start_url: '/learning-profile/',
+        scope:     '/learning-profile/',
         name: 'Learning Profile',
         short_name: 'Profile',
-        start_url: '/',
         display: 'standalone',
         background_color: '#ffffff',
         icons: [
           {
-            "src": "/pwa/pwa-64x64.png",
+            "src": "pwa/pwa-64x64.png",
             "sizes": "64x64",
             "type": "image/png"
           },
           {
-            "src": "/pwa/pwa-192x192.png",
+            "src": "pwa/pwa-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
           },
           {
-            "src": "/pwa/pwa-512x512.png",
+            "src": "pwa/pwa-512x512.png",
             "sizes": "512x512",
             "type": "image/png",
-            "purpose": "maskable"
+            "purpose": "maskable any"
           },
         ],
         screenshots: [
@@ -90,7 +91,6 @@ export default defineConfig({
         navigationPreload: true,
         cleanupOutdatedCaches: true,
         globPatterns: ['**/*.{js,css,html,ico,png,jpg,svg,json}'],
-        navigateFallback: '/index.html',
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
@@ -99,7 +99,7 @@ export default defineConfig({
               cacheName: 'google-fonts-cache',
               expiration: {
                 maxEntries: 10,
-                maxAgeSeconds: 60 * 60 * 24 * 365 // 1 year
+                maxAgeSeconds: 60 * 60 * 24 * 365
               },
               cacheableResponse: {
                 statuses: [0, 200]
@@ -113,7 +113,7 @@ export default defineConfig({
               cacheName: 'gstatic-fonts-cache',
               expiration: {
                 maxEntries: 10,
-                maxAgeSeconds: 60 * 60 * 24 * 365 // 1 year
+                maxAgeSeconds: 60 * 60 * 24 * 365
               },
               cacheableResponse: {
                 statuses: [0, 200]
