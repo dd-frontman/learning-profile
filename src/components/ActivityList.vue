@@ -25,14 +25,14 @@ const rows = computed(() =>
 <template>
   <div class="activities-card">
     <div class="activities-grid" role="table">
-      <div class="header">Курс</div>
-      <div class="header">Дата</div>
-      <div class="header">XP</div>
+      <div class="header" role="columnheader">Курс</div>
+      <div class="header" role="columnheader">Дата</div>
+      <div class="header" role="columnheader">XP</div>
 
       <template v-for="r in rows" :key="r.id">
-        <div class="cell course">{{ r.course }}</div>
-        <div class="cell date">{{ r.nice }}</div>
-        <div class="cell xp">{{ r.xp }}</div>
+        <div class="cell course" role="cell">{{ r.course }}</div>
+        <div class="cell date" role="cell">{{ r.nice }}</div>
+        <div class="cell xp" role="cell">{{ r.xp }}</div>
       </template>
     </div>
   </div>

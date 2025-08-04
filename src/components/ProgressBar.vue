@@ -22,6 +22,7 @@ watch(
     :aria-valuenow="current"
     aria-valuemin="0"
     aria-valuemax="100"
+    aria-label="Прогресс опыта"
   >
     <p class="current-xp">{{ current }}XP</p>
     <div

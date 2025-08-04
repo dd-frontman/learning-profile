@@ -12,7 +12,7 @@ const { level, progressPercentage, achievements } = useXpSystem()
 
 <template>
   <div class="profile">
-    <img :src="userStore.avatar" alt="avatar" class="avatar" />
+    <img :src="userStore.avatar" alt="avatar" class="avatar" width="80" />
     <h2>{{ userStore.name }}</h2>
     <SkillsBar :skills="userStore.skills" />
     <p>Уровень: {{ level }}</p>
@@ -37,11 +37,12 @@ const { level, progressPercentage, achievements } = useXpSystem()
   margin: auto;
   text-align: center;
 }
+
 .avatar {
-  width: 80px;
-  height: 80px;
+  aspect-ratio: auto;
   border-radius: 50%;
 }
+
 .achievements {
   display: flex;
   justify-content: center;

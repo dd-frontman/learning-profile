@@ -32,7 +32,7 @@ export default defineConfig({
       includeAssets: ['favicon.ico'],
       manifest: {
         start_url: '/learning-profile/',
-        scope:     '/learning-profile/',
+        scope: '/learning-profile/',
         name: 'Learning Profile',
         short_name: 'Profile',
         display: 'standalone',
