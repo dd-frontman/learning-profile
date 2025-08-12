@@ -1,7 +1,7 @@
 # Learning Profile — Vue 3 PWA
 *(RU | EN)*
 
-[🔗 Демо | Live demo](https://den-dev97.github.io/learning-profile/)
+[🔗 Демо | Live demo](https://dd-frontman.github.io/learning-profile/)
 <p align="center">
   <img src="public/pwa/screenshots/lighthouse.png" width="47%" alt="Скриншот Lighthouse / Lighthouse audit"/>
   <img src="public/pwa/screenshots/main.png"       width="47%" alt="Скриншот главного экрана / Main screen"/>
